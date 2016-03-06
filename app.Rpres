@@ -1,0 +1,54 @@
+Data Products Project
+========================================================
+author: Helping you select features for your new car
+autosize: TRUE
+Felix E. Rivera-Mariani, PhD
+
+INTRODUCTION
+========================================================
+
+This brief presentation is part of the [Coursera] (http://www.coursera.org) course Developing Data Products, which is part of the Johns Hopkins University 10-courses Data Science Specialization. This peer-assessed project is composed of two parts: 1) developing a Shiny application, and 2) preparing a pitch presentation related to the developed Shiny application. This presentation focuses on the second component of the project. 
+
+The developed application can be found at: 
+https://friveramariani.shinyapps.io/Mtcars-Clustering/
+
+The source code for the application can be found at:
+
+https://github.com/friveramariani/data-products
+
+*Note: the ui and server files are within the app.R.* 
+
+UTILITY OF THE APPLICATION 
+========================================================
+
+Using the **mtcars** dataset found in R, this application can aid you visualize how one feature of a car relates to the others. The features (i.e. variables) that you can evaluate re below:
+- **mpg** (miles per gallon) 
+- **cyl** (# of cylinders)
+- **disp** (displacement) 
+- **hp** (gross horsepower)
+- **drat** (rear axle ratio)
+- **wt** (weight [1000 pounds])
+
+***
+
+- **qsec** (1/4 mile time)
+- **vs** (V- or Straight-engine)
+- **am** (transmission type)
+- **gear** (# of forwards gears)
+- **carb** (# of carburetors)
+
+
+MTCARS DATASET
+========================================================
+The dataset use in this project is the Motor Trend Card Road tests (mtcars), which is found in R. Below are the dimensions and classess of the variabels. 
+```{r}
+str(mtcars)
+```
+
+EXAMPLE PLOT
+===
+Here is an example of the relationship between mpg (miles per gallon), disp (displacement), and wt (weight) variables. 
+```{r}
+library(car)
+scatterplot.matrix(~mpg+disp+wt, data=mtcars, cex.axis=1.5)
+```
